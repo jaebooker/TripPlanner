@@ -18,6 +18,7 @@
 		0DE432082255A5AE001DF0D7 /* ViewTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE432072255A5AE001DF0D7 /* ViewTripTableViewController.swift */; };
 		0DE4320A2255A5C5001DF0D7 /* AddTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE432092255A5C5001DF0D7 /* AddTripTableViewController.swift */; };
 		0DE4320C2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE4320B2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift */; };
+		0DE4320F2255A8F1001DF0D7 /* TripList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DE4320D2255A8F1001DF0D7 /* TripList.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0DE432072255A5AE001DF0D7 /* ViewTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTripTableViewController.swift; sourceTree = "<group>"; };
 		0DE432092255A5C5001DF0D7 /* AddTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripTableViewController.swift; sourceTree = "<group>"; };
 		0DE4320B2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0DE4320E2255A8F1001DF0D7 /* TripList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripList.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				0DE432072255A5AE001DF0D7 /* ViewTripTableViewController.swift */,
 				0DE432092255A5C5001DF0D7 /* AddTripTableViewController.swift */,
 				0DE4320B2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift */,
+				0DE4320D2255A8F1001DF0D7 /* TripList.xcdatamodeld */,
 			);
 			path = TripPlanner;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				0DE431D922559127001DF0D7 /* ViewController.swift in Sources */,
 				0DE4320A2255A5C5001DF0D7 /* AddTripTableViewController.swift in Sources */,
+				0DE4320F2255A8F1001DF0D7 /* TripList.xcdatamodeld in Sources */,
 				0DE431DF22559127001DF0D7 /* TripPlanner.xcdatamodeld in Sources */,
 				0DE431D722559127001DF0D7 /* AppDelegate.swift in Sources */,
 				0DE432082255A5AE001DF0D7 /* ViewTripTableViewController.swift in Sources */,
@@ -611,6 +615,16 @@
 			);
 			currentVersion = 0DE431DE22559127001DF0D7 /* TripPlanner.xcdatamodel */;
 			path = TripPlanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		0DE4320D2255A8F1001DF0D7 /* TripList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0DE4320E2255A8F1001DF0D7 /* TripList.xcdatamodel */,
+			);
+			currentVersion = 0DE4320E2255A8F1001DF0D7 /* TripList.xcdatamodel */;
+			path = TripList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

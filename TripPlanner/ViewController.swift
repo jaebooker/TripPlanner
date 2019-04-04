@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let trips: [String] = []
+    
+    let trips = [TripListItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

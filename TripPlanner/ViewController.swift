@@ -14,16 +14,44 @@ class ViewController: UITableViewController, AddTripViewControllerDelegate {
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
+        fetchAllItems()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return trips.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListTripCell", for: indexPath)
+        cell.textLabel?.text = trips[indexPath.row].name!
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You have been chosen")
+    }
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        performSegue(withIdentifier: "ViewTripSegue", sender: indexPath)
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let trip = trips[indexPath.row]
+        managedObjectContext.delete(trip)
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("\(error)")
+        }
+        trips.remove(at: indexPath.row)
+        tableView.reloadData()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddTripSegue" {
             let navigationController = segue.destination as! UINavigationController
             let addTripTableController = navigationController.topViewController as! AddTripViewController
             addTripTableController.delegate = self
-            let indexPath = sender as! NSIndexPath
-            let trip = trips[indexPath.row]
         } else if segue.identifier == "ViewTripSegue" {
             let navigationController = segue.destination as! UINavigationController
             let viewTripTableController = navigationController.topViewController as! ViewTripTableViewController
@@ -32,6 +60,15 @@ class ViewController: UITableViewController, AddTripViewControllerDelegate {
             let trip = trips[indexPath.row]
             //viewTripTableController.trip = "trippy"//trip.name!
             //viewTripTableController.indexPath = indexPath
+        }
+        else if segue.identifier == "EditTripSegue" {
+            let navigationController = segue.destination as! UINavigationController
+            let editTripController = navigationController.topViewController as! AddTripViewController
+            editTripController.delegate = self
+            let indexPath = sender as! NSIndexPath
+            let trip = trips[indexPath.row]
+            editTripController.trip = trip.name!
+            editTripController.indexPath = indexPath
         }
     }
     func cancelButtonPressed(by controller: AddTripViewController) {
@@ -50,12 +87,12 @@ class ViewController: UITableViewController, AddTripViewControllerDelegate {
     func tripSaved(by controller: AddTripViewController, with text: String, at indexPath: NSIndexPath?) {
         print("All are welcome here, my child. And you sent me this very odd message: \(text)")
         if let ip = indexPath {
-            let item = trips[ip.row]
-            item.name = text
+            let trip = trips[ip.row]
+            trip.name = text
         } else {
-            let item = NSEntityDescription.insertNewObject(forEntityName: "TripListItem", into: managedObjectContext) as! TripListItem
-            item.name = text
-            trips.append(item)
+            let trip = NSEntityDescription.insertNewObject(forEntityName: "TripListItem", into: managedObjectContext) as! TripListItem
+            trip.name = text
+            trips.append(trip)
         }
         do {
             try managedObjectContext.save()

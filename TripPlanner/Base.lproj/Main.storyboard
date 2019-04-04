@@ -57,7 +57,7 @@
         <!--Add a trip!-->
         <scene sceneID="3Kz-Pb-aug">
             <objects>
-                <tableViewController definesPresentationContext="YES" id="RUa-xK-NqS" sceneMemberID="viewController">
+                <tableViewController definesPresentationContext="YES" id="RUa-xK-NqS" customClass="AddTripTableViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5XP-8k-8nF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

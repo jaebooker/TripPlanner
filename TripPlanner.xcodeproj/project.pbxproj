@@ -15,6 +15,9 @@
 		0DE431E422559128001DF0D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE431E222559128001DF0D7 /* LaunchScreen.storyboard */; };
 		0DE431EF22559128001DF0D7 /* TripPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE431EE22559128001DF0D7 /* TripPlannerTests.swift */; };
 		0DE431FA22559129001DF0D7 /* TripPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE431F922559129001DF0D7 /* TripPlannerUITests.swift */; };
+		0DE432082255A5AE001DF0D7 /* ViewTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE432072255A5AE001DF0D7 /* ViewTripTableViewController.swift */; };
+		0DE4320A2255A5C5001DF0D7 /* AddTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE432092255A5C5001DF0D7 /* AddTripTableViewController.swift */; };
+		0DE4320C2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE4320B2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		0DE431F522559129001DF0D7 /* TripPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE431F922559129001DF0D7 /* TripPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerUITests.swift; sourceTree = "<group>"; };
 		0DE431FB22559129001DF0D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE432072255A5AE001DF0D7 /* ViewTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTripTableViewController.swift; sourceTree = "<group>"; };
+		0DE432092255A5C5001DF0D7 /* AddTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripTableViewController.swift; sourceTree = "<group>"; };
+		0DE4320B2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				0DE431E222559128001DF0D7 /* LaunchScreen.storyboard */,
 				0DE431E522559128001DF0D7 /* Info.plist */,
 				0DE431DD22559127001DF0D7 /* TripPlanner.xcdatamodeld */,
+				0DE432072255A5AE001DF0D7 /* ViewTripTableViewController.swift */,
+				0DE432092255A5C5001DF0D7 /* AddTripTableViewController.swift */,
+				0DE4320B2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift */,
 			);
 			path = TripPlanner;
 			sourceTree = "<group>";
@@ -260,8 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE431D922559127001DF0D7 /* ViewController.swift in Sources */,
+				0DE4320A2255A5C5001DF0D7 /* AddTripTableViewController.swift in Sources */,
 				0DE431DF22559127001DF0D7 /* TripPlanner.xcdatamodeld in Sources */,
 				0DE431D722559127001DF0D7 /* AppDelegate.swift in Sources */,
+				0DE432082255A5AE001DF0D7 /* ViewTripTableViewController.swift in Sources */,
+				0DE4320C2255A64C001DF0D7 /* AddTripTableViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

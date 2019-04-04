@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="t9h-eO-3m1" kind="presentation" id="yu8-qS-8Bq"/>
+                                    <segue destination="t9h-eO-3m1" kind="presentation" identifier="ViewTripSegue" id="yu8-qS-8Bq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -44,7 +44,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="zeM-uU-Cta" kind="presentation" id="l8J-iC-HSr"/>
+                                    <segue destination="zeM-uU-Cta" kind="presentation" identifier="addTripSegue" id="l8J-iC-HSr"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -191,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbI-iF-fpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-609" y="900"/>
+            <point key="canvasLocation" x="-609" y="938"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xsM-nR-79v">
@@ -250,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilJ-tN-bdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292.753623188406" y="853.45982142857144"/>
+            <point key="canvasLocation" x="1236" y="930"/>
         </scene>
     </scenes>
 </document>

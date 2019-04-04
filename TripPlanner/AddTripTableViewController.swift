@@ -13,15 +13,13 @@ class AddTripViewController: UIViewController {
     var trip: String?
     var indexPath: NSIndexPath?
     
-    
-    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+    @IBOutlet weak var tripTextField: UITextField!
+    @IBAction func cancelPressed(_ sender: Any) {
         delegate?.cancelButtonPressed(by: self)
         print("You have been damned!")
     }
-    @IBOutlet weak var TripTextField: UITextField!
-    
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        let text = TripTextField.text!
+    @IBAction func addPressed(_ sender: Any) {
+        let text = tripTextField.text!
         delegate?.tripSaved(by: self, with: text, at: indexPath)
         print("You have been saved, my son")
     }

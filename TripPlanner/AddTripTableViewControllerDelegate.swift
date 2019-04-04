@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol AddTripTableViewControllerDelegate: class {
-    func tripSaved(by controller: AddTripTableViewController, with text: String, at indexPath: NSIndexPath?)
-    func cancelButtonPressed(by controller: AddTripTableViewController)
+protocol AddTripViewControllerDelegate: class {
+    func tripSaved(by controller: AddTripViewController, with text: String, at indexPath: NSIndexPath?)
+    func cancelButtonPressed(by controller: AddTripViewController)
 }

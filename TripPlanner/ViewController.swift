@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class ViewController: UITableViewController, AddTripTableViewControllerDelegate {
+class ViewController: UITableViewController, AddTripViewControllerDelegate {
     
     var trips = [TripListItem]()
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -20,7 +20,7 @@ class ViewController: UITableViewController, AddTripTableViewControllerDelegate 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddTripSegue" {
             let navigationController = segue.destination as! UINavigationController
-            let addTripTableController = navigationController.topViewController as! AddTripTableViewController
+            let addTripTableController = navigationController.topViewController as! AddTripViewController
             addTripTableController.delegate = self
             let indexPath = sender as! NSIndexPath
             let trip = trips[indexPath.row]
@@ -34,7 +34,7 @@ class ViewController: UITableViewController, AddTripTableViewControllerDelegate 
             //viewTripTableController.indexPath = indexPath
         }
     }
-    func cancelButtonPressed(by controller: AddTripTableViewController) {
+    func cancelButtonPressed(by controller: AddTripViewController) {
         print("I am Satan, hear me roar")
         dismiss(animated: true, completion: nil)
     }
@@ -47,7 +47,7 @@ class ViewController: UITableViewController, AddTripTableViewControllerDelegate 
             print("\(error)")
         }
     }
-    func tripSaved(by controller: AddTripTableViewController, with text: String, at indexPath: NSIndexPath?) {
+    func tripSaved(by controller: AddTripViewController, with text: String, at indexPath: NSIndexPath?) {
         print("All are welcome here, my child. And you sent me this very odd message: \(text)")
         if let ip = indexPath {
             let item = trips[ip.row]
